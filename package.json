@@ -254,5 +254,8 @@
     "path": "0.12.7",
     "request": "2.88.0",
     "vscode-languageclient": "5.2.1"
+  },
+  "resolutions": {
+    "chevrotain": "^7.1.0"
   }
 }
