@@ -17,12 +17,16 @@ import { StatusMessages } from './statusMessages';
 import { caStatusBarProvider } from './caStatusBarProvider';
 import { CANotification } from './caNotification';
 import { DepOutputChannel } from './DepOutputChannel';
+import { FileExplorer } from './manifestList';
 
 let lspClient: LanguageClient;
 
 export let outputChannelDep: any;
 
 export function activate(context: vscode.ExtensionContext) {
+
+  new FileExplorer(context)
+
   let disposableFullStack = vscode.commands.registerCommand(
     Commands.TRIGGER_FULL_STACK_ANALYSIS,
     (uri: vscode.Uri) => {
@@ -42,7 +46,6 @@ export function activate(context: vscode.ExtensionContext) {
       }
     }
   );
-
   // show welcome message after first install or upgrade
   showUpdateNotification(context);
 

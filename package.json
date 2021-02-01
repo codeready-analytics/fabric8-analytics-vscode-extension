@@ -71,6 +71,30 @@
         ]
       }
     ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "manifest-explorer",
+          "title": "Stack Report",
+          "icon": "icon/pie.svg"
+        }
+      ]
+    },
+    "views": {
+      "manifest-explorer": [
+        {
+          "id": "fileExplorer",
+          "name": "Manifest File(s)",
+          "contextualTitle": "Package Explorer"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "fileExplorer",
+        "contents": "No manifest file found."
+      }
+    ],
     "commands": [
       {
         "command": "extension.fabric8AnalyticsWidgetFullStack",
